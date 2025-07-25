@@ -5,30 +5,51 @@ date = input(f"Enter the date (dd/mm/yyyy) [{default_date}]: ").strip()
 if not date:
     date = default_date
 
-account_input = input(f"Enter the account ([P]ersonal/[s]hared): ").strip().upper()
-if not account_input or account_input == 'P':
-    account = 'Personal'
-elif account_input == 'S':
-    account = 'Shared'
-else:
-    print("Invalid account type. Defaulting to 'Personal'.")
-    account = 'Personal'
+COMPTE = [
+    "Commun",
+    "Luc",
+    "Laura"
+]
 
-categories = ['Groceries', 'Transport', 'Entertainment', 'Food&Drinks', 'Sports', 'Home', 'Other']
+account_input = input(f"Enter the account (Commun/Luc/Laura): ").strip()
+if account_input in COMPTE:
+    account = account_input
+else:
+    print("Valeur par défaut: Commun")
+    account = 'Commun'
+
+CATEGORIES = [
+    'Maison',
+    'Transport',
+    'Santé',
+    'Restaurant',
+    'Courses',
+    'Bien-être',
+    'Culture',
+    'Sport',
+    'Shopping',
+    'Saucisse',
+    'Liquide',
+    'Economie',
+    'Cadeau',
+    'Autre'
+]
+
+
 print("Select a category from the following list:")
-for idx, cat in enumerate(categories, 1):
+for idx, cat in enumerate(CATEGORIES, 1):
     print(f"{idx}. {cat}")
 cat_choice = input("Enter the number corresponding to the category: ").strip()
 try:
     cat_idx = int(cat_choice) - 1
-    if 0 <= cat_idx < len(categories):
-        category = categories[cat_idx]
+    if 0 <= cat_idx < len(CATEGORIES):
+        category = CATEGORIES[cat_idx]
     else:
-        print("Invalid category. Defaulting to 'Other'.")
-        category = 'Other'
+        print("Invalid category. Defaulting to 'Autre'.")
+        category = 'Autre'
 except ValueError:
-    print("Invalid input. Defaulting to 'Other'.")
-    category = 'Other'
+    print("Invalid input. Defaulting to 'Autre'.")
+    category = 'Autre'
 
 description = input("Enter a 1-word description: ").strip().replace(',', '')
 
@@ -36,6 +57,3 @@ amount = input("Enter the amount (€): ").strip()
 
 with open("../expenses_working.txt", "a") as f:
     f.write(f"\n{date},{account},{category},{description},{amount}")
-
-with open("../expenses_working.txt", "r") as src, open("../Export/expenses.csv", "w") as dst:
-    dst.write(src.read())

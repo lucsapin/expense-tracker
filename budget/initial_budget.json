@@ -1,0 +1,80 @@
+{
+  "logement": {
+    "pret": 1141.35,
+    "electricite": 40,
+    "bouygues": 23,
+    "disney": 6,
+    "netflix": 8,
+    "travaux": 0,
+    "mobilier": 0,
+    "autre": 0
+  },
+  "transport": {
+    "public": 0,
+    "taxi": 0,
+    "essence": 0,
+    "peages": 0,
+    "maintenance": 0
+  },
+  "assurances": {
+    "habitation": 32,
+    "voiture": 46
+  },
+  "alimentation": {
+    "retrait": 0,
+    "supermarche": 0,
+    "commercant": 0,
+    "restaurant": 0,
+    "livraison": 0,
+    "la_fourche": 0,
+    "autre": 0
+  },
+  "animaux": {
+    "nourriture": 0,
+    "veto": 0,
+    "litiere": 0,
+    "autre": 0
+  },
+  "voyages": {
+    "train": 0,
+    "logement": 0,
+    "voiture": 0,
+    "autre": 0
+  },
+  "luc": {
+    "medecin": 0,
+    "sport": 0,
+    "bien_etre": 0,
+    "shopping": 0,
+    "sorties": 0,
+    "livret": 250,
+    "assurance_vie": 50,
+    "investissement": 100,
+    "retrait": 0,
+    "autre": 0
+  },
+  "laura": {
+    "medecin": 0,
+    "sport": 0,
+    "bien_etre": 0,
+    "shopping": 0,
+    "sorties": 0,
+    "livret": 200,
+    "assurance_vie": 40,
+    "investissement": 0,
+    "retrait": 0,
+    "autre": 0
+  },
+  "culture": {
+    "cinema": 38,
+    "concert": 0,
+    "livres": 0,
+    "autre": 0
+  },
+  "taxes": {
+    "foncier": 152,
+    "banque": 32.5,
+    "immo": 250,
+    "autre": 0
+  }
+}
